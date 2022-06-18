@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='dist/main.css') }}">
+</head>
+
+<body class="flex justify-center items-center h-screen">
+    <ul class="flex flex-col space-y-16">
+        {% for service in config: %}
+        {% include "service.html" %}
+        {% endfor %}
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,3 @@
+FROM supplantr/python-toolbox
+
+RUN dnf install -y npm
