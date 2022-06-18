@@ -10,6 +10,9 @@ app = Flask(__name__)
 
 
 def get_hostname():
+    name = os.getenv("EASYMODE_HOSTNAME")
+    if name:
+        return name
     return socket.getfqdn()
 
 
