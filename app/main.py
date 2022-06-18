@@ -20,10 +20,10 @@ def get_ip():
     return socket.gethostbyname(get_hostname())
 
 
-def get_address(port=None):
+def get_address(url=None):
     ip = get_ip()
-    if port:
-        ip = "{}:{}".format(ip, port)
+    if url:
+        ip = "{}:{}".format(ip, url)
     return "http://" + ip
 
 
@@ -41,13 +41,13 @@ def load_config():
                 print(e, file=sys.stderr)
                 sys.exit(2)
 
-    config_keys = ["name", "port", "icon"]
+    config_keys = ["name", "url", "icon"]
 
     try:
         for i, s in enumerate(config, start=1):
             for k in config_keys:
                 s[k]
-            s["url"] = get_address(s["port"])
+            s["url"] = get_address(s["url"])
     except KeyError as e:
         print("[error] service {} is missing key: {}".format(i, e), file=sys.stderr)
         sys.exit(2)
