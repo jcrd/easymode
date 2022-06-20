@@ -11,7 +11,7 @@
     "watch": "^1.0.2"
   },
   "scripts": {
-    "build:css": "npx postcss static/src/main.css -o static/dist/main.css",
+    "build:css": "npx postcss app/static/src/main.css -o app/static/dist/main.css",
     "watch": "watch 'npm run build:css' ./templates"
   }
 }
