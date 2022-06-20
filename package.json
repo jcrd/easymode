@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "@fullhuman/postcss-purgecss": "^4.1.3",
     "@mdi/font": "^6.7.96",
     "autoprefixer": "^10.4.7",
     "postcss": "^8.4.14",
