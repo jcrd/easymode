@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "@mdi/font": "^6.7.96",
     "autoprefixer": "^10.4.7",
     "postcss": "^8.4.14",
     "postcss-cli": "^9.1.0",
