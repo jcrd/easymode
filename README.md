@@ -6,6 +6,12 @@ It is designed to be configured by automation systems such as [Ansible][ansible]
 
 [ansible]: https://www.ansible.com/
 
+## Screenshot
+
+[<img src="https://github.com/jcrd/easymode/blob/assets/screenshot.png" width="300"/>][scrn]
+
+[scrn]: https://github.com/jcrd/easymode/blob/assets/screenshot.png
+
 ## Usage
 
 easymode is *easiest* to use via docker or podman.
@@ -20,7 +26,24 @@ It expects:
 
 ### Configuration
 
-easymode looks for YAML (`.yml`) configuration files in the path pointed to be `EASYMODE_CONFIG`, which is set to `/config` in the above image.
+easymode looks for YAML (`.yml`) configuration files in the path pointed to by
+`EASYMODE_CONFIG`, which is set to `/config` in the above image.
+
+Config files must contain these top-level keys:
+
+- `name`: name of the service
+- `url`: service URL starting with port (will be appended to the server's IP address)
+- `icon`: name of icon from [material design icons][mdi]
+
+[mdi]: https://materialdesignicons.com/
+
+Example `plex.yml`:
+
+```yml
+name: plex
+url: 32400/web
+icon: live_tv
+```
 
 ### Example
 
