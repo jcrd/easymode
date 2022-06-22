@@ -9,11 +9,17 @@
 </head>
 
 <body class="flex justify-center items-center h-screen">
-    <ul class="flex flex-col space-y-16">
-        {% for service in config: %}
-        {% include "service.html" %}
-        {% endfor %}
-    </ul>
+    <div class="flex flex-col divide-y-2 divide-black">
+        <div class="flex space-x-4">
+            <i class="material-icons pt-4">home</i>
+            <h1 class="text-5xl">{{ title }}</h1>
+        </div>
+        <ul class="flex flex-col pt-12 space-y-12">
+            {% for service in config: %}
+            {% include "service.html" %}
+            {% endfor %}
+        </ul>
+    </div>
 </body>
 
 </html>
