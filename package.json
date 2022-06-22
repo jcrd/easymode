@@ -10,6 +10,7 @@
   },
   "scripts": {
     "build:css": "npx postcss app/static/src/main.css -o app/static/dist/main.css",
-    "watch": "watch 'npm run build:css' ./app/templates"
+    "watch": "watch 'npm run build:css' ./app/templates",
+    "start": "./start.sh"
   }
 }
