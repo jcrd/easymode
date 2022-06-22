@@ -39,7 +39,7 @@ def load_config():
             continue
         with open(PurePath(path, f), "r") as file:
             try:
-                config.extend(yaml.safe_load(file))
+                config.append(yaml.safe_load(file))
             except yaml.YAMLError as e:
                 print(e, file=sys.stderr)
                 sys.exit(2)
