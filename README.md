@@ -33,16 +33,16 @@ Config files must contain these top-level keys:
 
 - `name`: name of the service
 - `url`: service URL starting with port (will be appended to the server's IP address)
-- `icon`: name of icon from [material design icons][mdi]
+- `icon`: name of icon from [iconify][iconify]
 
-[mdi]: https://materialdesignicons.com/
+[iconify]: https://icon-sets.iconify.design/
 
 Example `plex.yml`:
 
 ```yml
 name: plex
 url: 32400/web
-icon: live_tv
+icon: arcticons:plex
 ```
 
 ### Example

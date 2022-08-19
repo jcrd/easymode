@@ -1,8 +1,6 @@
 <li>
-    <a class="flex space-x-4 text-4xl" href="{{ service.url }}">
-        <i class="material-icons pt-2.5">
-            {{ service.icon }}
-        </i>
+    <a class="flex pl-1.5 space-x-5 text-4xl" href="{{ service.url }}">
+        <iconify-icon class="pt-1" icon="{{ service.icon }}"></iconify-icon>
         <p class="hover:underline">
             {{ service.name }}
         </p>
