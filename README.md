@@ -37,12 +37,17 @@ Config files must contain these top-level keys:
 
 [iconify]: https://icon-sets.iconify.design/
 
+And optionally:
+
+- `weight`: relative position in list, sorted ascending (default is 9)
+
 Example `plex.yml`:
 
 ```yml
 name: plex
 url: 32400/web
 icon: arcticons:plex
+weight: 1
 ```
 
 ### Example

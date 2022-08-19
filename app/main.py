@@ -6,6 +6,8 @@ from pathlib import PurePath
 import yaml
 from flask import Flask, render_template
 
+DEFAULT_WEIGHT = 9
+
 app = Flask(__name__)
 
 
@@ -51,11 +53,13 @@ def load_config():
             for k in config_keys:
                 s[k]
             s["url"] = get_address(s["url"])
+            if "weight" not in s:
+                s["weight"] = DEFAULT_WEIGHT
     except KeyError as e:
         print("[error] service {} is missing key: {}".format(i, e), file=sys.stderr)
         sys.exit(2)
 
-    return config
+    return sorted(config, key=lambda s: s["weight"])
 
 
 config = load_config()
